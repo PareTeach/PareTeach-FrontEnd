@@ -4,13 +4,15 @@ import logo from "../assets/logo.png";
 
 const SideNavbar = () => {
   return (
-    <div className="w-[300px] bg-primary_light">
+    <div className="w-[300px] bg-primary_light relative flex flex-col items-center">
       {/* logo */}
       <div className="flex justify-center items-center w-full h-[100px]">
         <img className="object-contain" width={90} src={logo} />
       </div>
 
-      <div className="flex flex-col mt-[40px] gap-y-3 text-lg px-2">
+      <div className="w-[80%] h-[.5px] bg-black/30 absolute top-[15vh]" />
+
+      <div className="flex flex-col mt-[60px] gap-y-3 px-5 w-full">
         <NavLink to={"/dashboard"} className="side_nav_li">
           Dashboard
         </NavLink>
