@@ -6,6 +6,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import {
   Communication,
   Dashboard,
+  DataManagement,
   Login,
   Logout,
   ReportAndAnalysis,
@@ -19,11 +20,11 @@ export default function App() {
   const user = true;
 
   return (
-    <div className="bg-black h-screen flex">
+    <div className="bg-black h-screen flex relative">
       {/* side bar */}
       {user && <SideNavbar />}
       {/* content and top bar */}
-      <div className="bg-blue-400 w-full">
+      <div className="bg-background_light w-full relative">
         <TopNavbar />
         <Routes>
           <Route
@@ -37,6 +38,10 @@ export default function App() {
           <Route
             path="/user-management"
             element={user ? <UserManagement /> : <Navigate to={"/"} />}
+          />
+          <Route
+            path="/data-management"
+            element={user ? <DataManagement /> : <Navigate to={"/"} />}
           />
           <Route
             path="/communication"
@@ -53,6 +58,10 @@ export default function App() {
           <Route
             path="/logout"
             element={user ? <Logout /> : <Navigate to={"/"} />}
+          />
+          <Route
+            path="/login"
+            element={!user ? <Login /> : <Navigate to={"/"} />}
           />
         </Routes>
       </div>

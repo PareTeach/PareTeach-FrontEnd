@@ -25,3 +25,6 @@
   min-width: 320px;
   min-height: 100vh;
 } */
+.side_nav_li {
+  @apply pl-[25px] pt-[10px] pb-[10px] font-light text-[16px] rounded-full;
+}
