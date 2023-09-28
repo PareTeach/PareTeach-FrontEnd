@@ -13,46 +13,46 @@ const Login = () => {
     <div className="h-[85vh] bg-black flex justify-center items-center relative">
       <WelcomeBackground />
 
-      <div className="w-full p-24 m-auto  rounded-md lg:max-w-xl absolute">
+      <div className="w-[35%] px-16 py-16 m-auto bg-background_light  rounded-md lg:max-w-xl absolute">
         <h1 className="text-xl font-semibold text-center text-black">
           Sign In to your account
         </h1>
         <form className="mt-10 flex gap-y-4 flex-col">
           {/* input user name */}
           <div className="mb-2 flex justify-center items-center">
-            <div className="bg-white border-b-4 border-black h-12 w-12 flex justify-center items-center">
+            <div className="bg-white border-b-2 border-black h-10 w-10 flex justify-center items-center">
               <UserIcon className="h-4 w-4 bg-white text-black" />
             </div>
             <input
               type="text"
               placeholder="Username"
-              className="h-12 block w-full text-purple-700 bg-white  outline-none border-b-4 border-black"
+              className="h-10 block w-full px-0 text-[12px] text-black bg-white  outline-none border-b-2 border-black"
             />
           </div>
           {/* input user name */}
 
           {/* input user Id */}
           <div className="mb-2 flex justify-center items-center">
-            <div className="bg-white border-b-4 border-black h-12 w-12 flex justify-center items-center">
+            <div className="bg-white border-b-2 border-black h-10 w-10 flex justify-center items-center">
               <IdentificationIcon className="h-4 w-4 bg-white text-black" />
             </div>
             <input
               type="text"
               placeholder="User ID"
-              className="h-12 block w-full text-purple-700 bg-white  outline-none border-b-4 border-black"
+              className="h-10 block w-full text-[12px] text-black bg-white  outline-none border-b-2 border-black"
             />
           </div>
           {/* input user name */}
 
           {/* input user PW */}
           <div className="mb-2 flex justify-center items-center">
-            <div className="bg-white border-b-4 border-black h-12 w-12 flex justify-center items-center">
+            <div className="bg-white border-b-2 border-black h-10 w-10 flex justify-center items-center">
               <LockClosedIcon className="h-4 w-4 bg-white text-black" />
             </div>
             <input
               type="password"
               placeholder="Password"
-              className="h-12 block w-full text-purple-700 bg-white  outline-none border-b-4 border-black"
+              className="h-10 block w-full text-[12px] text-black bg-white  outline-none border-b-2 border-black"
             />
           </div>
           {/* input user name */}
