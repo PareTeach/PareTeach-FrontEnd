@@ -8,6 +8,7 @@ import Communication from "./Communication";
 import ReportAndAnalysis from "./ReportAndAnalysis";
 import Settings from "./Settings";
 import Logout from "./Logout";
+import SignUp from "./SignUp";
 export {
   Login,
   Register,
@@ -19,4 +20,5 @@ export {
   ReportAndAnalysis,
   Settings,
   Logout,
+  SignUp,
 };

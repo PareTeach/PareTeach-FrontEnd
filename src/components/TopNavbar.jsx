@@ -9,11 +9,11 @@ const TopNavbar = () => {
   return (
     <div className="bg-primary_dark h-[15vh] relative px-4 flex justify-between items-center">
       <div className="h-[100px] w-[80px] flex justify-center items-center">
-        {pathname === "/" || pathname === "/login" ? (
+        {pathname === "/" || pathname === "/login" || pathname === "/signup" ? (
           <img className="object-contain" width={90} src={logo} />
         ) : null}
       </div>
-      {pathname !== "/" && pathname !== "/login" && (
+      {pathname !== "/" && pathname !== "/login" && pathname !== "/signup" && (
         <div className="flex gap-x-5">
           <input
             type="text"

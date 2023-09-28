@@ -11,13 +11,14 @@ import {
   Logout,
   ReportAndAnalysis,
   Settings,
+  SignUp,
   UserManagement,
   Welcome,
 } from "../src/pages/index";
 import { TopNavbar, SideNavbar } from "../src/components/index";
 
 export default function App() {
-  const user = true;
+  const user = false;
 
   return (
     <div className="bg-black h-screen flex relative">
@@ -62,6 +63,10 @@ export default function App() {
           <Route
             path="/login"
             element={!user ? <Login /> : <Navigate to={"/"} />}
+          />
+          <Route
+            path="/signup"
+            element={!user ? <SignUp /> : <Navigate to={"/"} />}
           />
         </Routes>
       </div>
