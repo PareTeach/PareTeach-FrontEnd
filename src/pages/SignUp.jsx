@@ -1,11 +1,5 @@
 import React from "react";
 import { WelcomeBackground } from "../components";
-import {
-  BeakerIcon,
-  UserIcon,
-  IdentificationIcon,
-  LockClosedIcon,
-} from "@heroicons/react/24/outline";
 import { Link, NavLink } from "react-router-dom";
 
 const SignUp = () => {

@@ -1,7 +1,12 @@
 import React from "react";
+import { NavUserManagement } from "../components";
 
 const UserManagement = () => {
-  return <div>UserManagement</div>;
+  return (
+    <section>
+      <NavUserManagement />
+    </section>
+  );
 };
 
 export default UserManagement;

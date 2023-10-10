@@ -4,21 +4,29 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Navigate, Route, Routes } from "react-router-dom";
 import {
+  Admin,
   Communication,
   Dashboard,
   DataManagement,
   Login,
   Logout,
+  Parent,
   ReportAndAnalysis,
   Settings,
   SignUp,
+  Student,
+  Teacher,
   UserManagement,
   Welcome,
 } from "../src/pages/index";
-import { TopNavbar, SideNavbar } from "../src/components/index";
+import {
+  TopNavbar,
+  SideNavbar,
+  NavUserManagement,
+} from "../src/components/index";
 
 export default function App() {
-  const user = false;
+  const user = true;
 
   return (
     <div className="bg-black h-screen flex relative">
@@ -36,10 +44,12 @@ export default function App() {
             path="/dashboard"
             element={user ? <Dashboard /> : <Navigate to={"/"} />}
           />
-          <Route
-            path="/user-management"
-            element={user ? <UserManagement /> : <Navigate to={"/"} />}
-          />
+          <Route path="/user-management" element={<NavUserManagement />}>
+            <Route path="Admin" element={<Admin />} />
+            <Route path="Teacher" element={<Teacher />} />
+            <Route path="Student" element={<Student />} />
+            <Route path="Parent" element={<Parent />} />
+          </Route>
           <Route
             path="/data-management"
             element={user ? <DataManagement /> : <Navigate to={"/"} />}
