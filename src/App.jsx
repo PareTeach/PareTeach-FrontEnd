@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { Navigate, Route, Routes } from "react-router-dom";
 import {
@@ -16,13 +13,13 @@ import {
   SignUp,
   Student,
   Teacher,
-  UserManagement,
   Welcome,
 } from "../src/pages/index";
 import {
   TopNavbar,
   SideNavbar,
   NavUserManagement,
+  FormTeacher,
 } from "../src/components/index";
 
 export default function App() {
@@ -47,6 +44,8 @@ export default function App() {
           <Route path="/user-management" element={<NavUserManagement />}>
             <Route path="Admin" element={<Admin />} />
             <Route path="Teacher" element={<Teacher />} />
+            <Route path="Teacher/:id" element={<Admin />} />
+            <Route path="Teacher/Add" element={<FormTeacher />} />
             <Route path="Student" element={<Student />} />
             <Route path="Parent" element={<Parent />} />
           </Route>

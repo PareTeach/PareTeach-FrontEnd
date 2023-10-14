@@ -25,20 +25,20 @@ const FormEditProfile = () => {
       <>
         {[1, 1, 1, 1, 1, 1].map((item) => (
           <div className="flex justify-between items-center mb-4">
-            <span className="text-sm">Username</span>
+            <label className="text-sm">User name</label>
             <input
               type="text"
-              className="w-80 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
+              className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
             />
-            <button className="h-[35xp] w-[35px] rounded-full bg-red-200 text-sm">
-              Edit
-            </button>
           </div>
         ))}
       </>
 
       {/* submit button */}
-      <button className="bg-primary_dark text-sm py-1 rounded-md mt-10 text-white font-bold">
+      <button
+        // onClick={backToTable}
+        className="bg-primary_dark text-sm py-4 rounded-md mt-10 text-white font-bold"
+      >
         Submit
       </button>
     </div>
