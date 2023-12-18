@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 
-const TeacherTable = ({ teacherList, updateList }) => {
+const StudentTable = ({ teacherList, updateList }) => {
   const navigate = useNavigate();
   function EditHandler(item) {
     navigate(`/user-management/Teacher/${item}`);
@@ -32,10 +32,10 @@ const TeacherTable = ({ teacherList, updateList }) => {
           <thead className="text-xs text-white uppercase bg-primary_dark flex w-full">
             <tr>
               <th scope="col" className="w-[150px] p-2">
-                Teacher ID
+                Student ID
               </th>
               <th scope="col" className="w-[150px] p-2">
-                Teacher Name
+                Student Name
               </th>
               <th scope="col" className="w-[150px] p-2">
                 Class
@@ -85,13 +85,13 @@ const TeacherTable = ({ teacherList, updateList }) => {
       )}
 
       <button
-        onClick={() => navigate("/user-management/Teacher/Add")}
+        onClick={() => navigate("/user-management/Student/Add")}
         className="bg-primary_dark text-sm py-2 px-4 rounded-md mt-4 text-white font-bold"
       >
-        Add Teacher
+        Add Student
       </button>
     </div>
   );
 };
 
-export default TeacherTable;
+export default StudentTable;

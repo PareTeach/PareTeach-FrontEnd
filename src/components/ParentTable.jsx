@@ -3,10 +3,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 
-const TeacherTable = ({ teacherList, updateList }) => {
+const ParentTable = ({ teacherList, updateList }) => {
   const navigate = useNavigate();
+
   function EditHandler(item) {
-    navigate(`/user-management/Teacher/${item}`);
+    // navigate(`/user-management/Teacher/${item}`);
   }
 
   const deleteTeacher = async (id) => {
@@ -32,14 +33,11 @@ const TeacherTable = ({ teacherList, updateList }) => {
           <thead className="text-xs text-white uppercase bg-primary_dark flex w-full">
             <tr>
               <th scope="col" className="w-[150px] p-2">
-                Teacher ID
+                User name
               </th>
-              <th scope="col" className="w-[150px] p-2">
-                Teacher Name
-              </th>
-              <th scope="col" className="w-[150px] p-2">
-                Class
-              </th>
+              {/* <th scope="col" className="w-[150px] p-2">
+                Parent email
+              </th> */}
               <th scope="col" className="w-[150px] p-2">
                 Action
               </th>
@@ -55,14 +53,13 @@ const TeacherTable = ({ teacherList, updateList }) => {
                 className="border-b lex w-full bg-primary_light border-gray-700  text-white"
               >
                 <td scope="row" className="w-[150px] p-2">
-                  {item.user_id}
+                  {/* {item.first_name} {item.last_name} */}
+                  {item.user_name}
                 </td>
-                <td scope="row" className="w-[150px] p-2">
-                  {item.first_name} {item.last_name}
-                </td>
-                <td scope="row" className="w-[150px] p-2">
-                  {item.class}
-                </td>
+                {/* <td scope="row" className="w-[150px] p-2">
+                  {item.email}
+                </td> */}
+
                 <td scope="row" className="w-[150px] p-2 ">
                   {/* <button
                     disabled
@@ -85,13 +82,13 @@ const TeacherTable = ({ teacherList, updateList }) => {
       )}
 
       <button
-        onClick={() => navigate("/user-management/Teacher/Add")}
+        onClick={() => navigate("/user-management/Parent/Add")}
         className="bg-primary_dark text-sm py-2 px-4 rounded-md mt-4 text-white font-bold"
       >
-        Add Teacher
+        Add Parent
       </button>
     </div>
   );
 };
 
-export default TeacherTable;
+export default ParentTable;

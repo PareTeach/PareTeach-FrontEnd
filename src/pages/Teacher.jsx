@@ -27,7 +27,6 @@ const Teacher = () => {
         ...doc.data(),
         id: doc.id,
       }));
-      console.log(filterData);
       setTeacherList(filterData);
       if (filterData.length == 0) {
         setIsEmptyList(true);
@@ -44,9 +43,13 @@ const Teacher = () => {
     getTodoList();
   }, []);
 
+  const updateList = () => {
+    getTodoList();
+  };
+
   return (
     <div className="h-[80vh] flex justify-center items-center">
-      <TeacherTable teacherList={teacherList} />
+      <TeacherTable teacherList={teacherList} updateList={updateList} />
     </div>
   );
 };

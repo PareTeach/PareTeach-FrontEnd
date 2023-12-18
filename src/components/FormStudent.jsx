@@ -5,7 +5,7 @@ import { db } from "../../firebaseConfig";
 const img =
   "https://images.unsplash.com/photo-1697275021816-42588f48ef7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80";
 
-const FormTeacher = () => {
+const FormStudent = () => {
   const [teacherDetails, setTeacherDetails] = useState({
     email: "",
     pw: "",
@@ -32,7 +32,7 @@ const FormTeacher = () => {
         user_id: teacherDetails.user_id,
         first_name: teacherDetails.first_name,
         last_name: teacherDetails.last_name,
-        role: "Teacher",
+        role: "Student",
         date: new Date(),
         class: teacherDetails.class,
       });
@@ -65,7 +65,9 @@ const FormTeacher = () => {
             />
           </div>
 
+     
           <div className="flex flex-col">
+    
             <span className="font-semibold">Username</span>
             <span>John@gmail.com - Administrator</span>
           </div>
@@ -124,7 +126,7 @@ const FormTeacher = () => {
 
           {/* --- Teacher ID */}
           <div className="flex justify-between  w-full">
-            <label className="text-sm">Teacher ID</label>
+            <label className="text-sm">Student ID</label>
             <input
               value={teacherDetails.user_id}
               onChange={(e) =>
@@ -203,4 +205,4 @@ const FormTeacher = () => {
   );
 };
 
-export default FormTeacher;
+export default FormStudent;

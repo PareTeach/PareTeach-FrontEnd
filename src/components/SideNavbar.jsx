@@ -28,12 +28,12 @@ const SideNavbar = () => {
         <NavLink to={"/report-analysis"} className="side_nav_li">
           Report & Analysis
         </NavLink>
-        <NavLink to={"/settings"} className="side_nav_li">
+        {/* <NavLink to={"/settings"} className="side_nav_li">
           Settings
         </NavLink>
         <NavLink to={"/logout"} className="side_nav_li">
           Logout
-        </NavLink>
+        </NavLink> */}
       </div>
     </div>
   );

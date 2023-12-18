@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const FormEditProfile = () => {
+  const [adminFormDetails, setAdminFormDetails] = useState({
+    user_name: "",
+    user_id: "",
+    class: "",
+    first_name: "",
+    last_name: "",
+  });
   return (
     <div className="bg-background_green_light flex w-[600px] p-10 rounded-md flex-col">
       {/* image and name  */}
@@ -23,23 +30,69 @@ const FormEditProfile = () => {
 
       {/* input fields */}
       <>
-        {[1, 1, 1, 1, 1, 1].map((item) => (
-          <div className="flex justify-between items-center mb-4">
-            <label className="text-sm">User name</label>
-            <input
-              type="text"
-              className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
-            />
-          </div>
-        ))}
+        <div className="flex justify-between items-center mb-4">
+          <label className="text-sm">User Name</label>
+          <input
+            type="text"
+            className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
+          />
+        </div>
+
+        <div className="flex justify-between items-center mb-4">
+          <label className="text-sm">User ID</label>
+          <input
+            type="text"
+            className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
+          />
+        </div>
+
+        <div className="flex justify-between items-center mb-4">
+          <label className="text-sm">Password</label>
+          <input
+            type="text"
+            className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
+          />
+        </div>
+
+        <div className="flex justify-between items-center mb-4">
+          <label className="text-sm">Email</label>
+          <input
+            type="text"
+            className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
+          />
+        </div>
+
+        <div className="flex justify-between items-center mb-4">
+          <label className="text-sm">First Name</label>
+          <input
+            type="text"
+            className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
+          />
+        </div>
+
+        <div className="flex justify-between items-center mb-4">
+          <label className="text-sm">Last Name</label>
+          <input
+            type="text"
+            className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
+          />
+        </div>
+
+        <div className="flex justify-between items-center mb-4">
+          <label className="text-sm">Role</label>
+          <input
+            type="text"
+            className="w-96 bg-background_light rounded-sm text-gray-600 pl-4 py-[4px] outline-none text-xs"
+          />
+        </div>
       </>
 
       {/* submit button */}
       <button
         // onClick={backToTable}
-        className="bg-primary_dark text-sm py-4 rounded-md mt-10 text-white font-bold"
+        className="bg-primary_dark text-sm py-2 rounded-md mt-6 text-white font-bold"
       >
-        Submit
+        Add
       </button>
     </div>
   );

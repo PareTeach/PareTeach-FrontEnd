@@ -5,6 +5,7 @@ import NavUserManagement from "./NavUserManagement";
 import FormEditProfile from "./FormEditProfile";
 import TeacherTable from "./TeacherTable";
 import FormTeacher from "./FormTeacher";
+import FormParent from "./FormParent";
 export {
   SideNavbar,
   TopNavbar,
@@ -13,4 +14,5 @@ export {
   FormEditProfile,
   TeacherTable,
   FormTeacher,
+  FormParent,
 };

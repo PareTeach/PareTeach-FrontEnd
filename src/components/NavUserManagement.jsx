@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
 const NavItem = {
-  ADMIN: "Admin",
+  // ADMIN: "Admin",
   TEACHER: "Teacher",
   STUDENt: "Student",
   PARENT: "Parent",
@@ -10,7 +10,7 @@ const NavItem = {
 
 const NavUserManagement = () => {
   const navigate = useNavigate();
-  const [selectedItem, setSelectedItem] = useState(NavItem.ADMIN);
+  const [selectedItem, setSelectedItem] = useState(NavItem.TEACHER);
 
   const handleNavigate = (item) => {
     navigate(`/user-management/${item}`);

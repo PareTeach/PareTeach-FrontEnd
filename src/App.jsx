@@ -20,7 +20,9 @@ import {
   SideNavbar,
   NavUserManagement,
   FormTeacher,
+  FormParent,
 } from "../src/components/index";
+import FormStudent from "./components/FormStudent";
 
 export default function App() {
   const user = true;
@@ -42,10 +44,12 @@ export default function App() {
             element={user ? <Dashboard /> : <Navigate to={"/"} />}
           />
           <Route path="/user-management" element={<NavUserManagement />}>
-            <Route path="Admin" element={<Admin />} />
+            {/* <Route path="Admin" element={<Admin />} /> */}
             <Route path="Teacher" element={<Teacher />} />
             <Route path="Teacher/:id" element={<Admin />} />
             <Route path="Teacher/Add" element={<FormTeacher />} />
+            <Route path="Student/Add" element={<FormStudent />} />
+            <Route path="Parent/Add" element={<FormParent />} />
             <Route path="Student" element={<Student />} />
             <Route path="Parent" element={<Parent />} />
           </Route>
